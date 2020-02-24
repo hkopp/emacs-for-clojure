@@ -73,7 +73,17 @@
     tagedit
 
     ;; git integration
-    magit))
+    magit
+
+    ;; python integration
+    elpy
+
+    ;; on-the-fly syntax checking
+    flycheck
+
+    ;; Run autopep8 on save
+    py-autopep8
+))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -137,6 +147,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-python.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
