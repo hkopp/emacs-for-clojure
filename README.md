@@ -1,7 +1,6 @@
-# this is a Clojure-friendly emacs config
+# This is a Clojure-friendly emacs config
 
-If you're new to emacs, check out
-[this introductory tutorial](http://www.braveclojure.com/basic-emacs/)!
+If you're new to emacs, check out [this introductory tutorial](http://www.braveclojure.com/basic-emacs/)!
 
 ## Installing
 
@@ -12,11 +11,8 @@ If you're new to emacs, check out
    would delete `C:\Users\jason\AppData\Roaming\.emacs.d`.) This is
    where Emacs looks for configuration files, and deleting these files
    and directories will ensure that you start with a clean slate.
-3. Download the Emacs
-   [configuration zip file](https://github.com/flyingmachine/emacs-for-clojure/archive/book1.zip)
-   and unzip it. Its contents should be a folder,
-   `emacs-for-clojure-book1`. Run `mv path/to/emacs-for-clojure-book1
-   ~/.emacs.d`.
+3. Clone this repository
+   `git clone https://github.com/hkopp/emacs-for-clojure.git .emacs.d`
 
 Then open Emacs.
 
@@ -40,7 +36,7 @@ To upgrade:
 3. Run `rm -Rf .emacs.d/elpa/cider-*`
 4. Open Emacs. You'll probably see some errors and your theme won't
    load. That's ok.
-5. In Emacs, run `M-x package-refresh contents`.
+5. In Emacs, run `M-x package-refresh-contents`.
 6. In Emacs, run `M-x package-install cider`.
 7. Close and re-open Emacs.
 
@@ -50,22 +46,14 @@ That should install the latest version. Enjoy!
 
 I've tried to separate everything logically and document the purpose
 of every line. [`init.el`](./init.el) acts as a kind of table of
-contents.  It's a good idea to eventually go through `init.el` and the
-files under the `customizations` directory so that you know exactly
-what's going on.
+contents.
 
-## Supporting CSS, HTML, JS, etc.
+## Currently supported Languages in this config
+- Clojure
+- Python
+- JS
 
-Emacs has decent support for CSS, HTML, JS, and many other file types out of the box, but if you want better support, then have a look at [my personal emacs config's init.el](https://github.com/flyingmachine/emacs.d/blob/master/init.el). It's meant to read as a table of contents. The emacs.d as a whole adds the following:
-
-* [Customizes js-mode and html editing](https://github.com/flyingmachine/emacs.d/blob/master/customizations/setup-js.el)
-    * Sets indentation level to 2 spaces for JS
-    * enables subword-mode so that M-f and M-b break on capitalization changes
-    * Uses `tagedit` to give you paredit-like functionality when editing html
-    * adds support for coffee mode
-* [Uses enh-ruby-mode for ruby editing](https://github.com/flyingmachine/emacs.d/blob/master/customizations/setup-ruby.el). enh-ruby-mode is a little nicer than the built-in ruby-mode, in my opinion.
-    * Associates many filenames and extensions with enh-ruby-mode (.rb, .rake, Rakefile, etc)
-    * Adds keybindings for running specs
-* Adds support for YAML and SCSS using the yaml-mode and scss-mode packages
-
-In general, if you want to add support for a language then you should be able to find good instructions for it through Google. Most of the time, you'll just need to install the "x-lang-mode" package for it.
+## Common Errors
+### Failed to verify signature archive-contents.sig
+Fix with `gpg --homedir ~/emacs.d/elpa/gnupg --receive-keys <key-id>`
+[ref](https://stackoverflow.com/questions/58202993/emacs-failed-to-verify-signature-archive-contents-sig)
