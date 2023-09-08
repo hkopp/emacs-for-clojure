@@ -83,6 +83,9 @@
 
     ;; Run autopep8 on save
     py-autopep8
+
+    ;; which-key: shows a popup of available keybindings when typing a long key sequence (e.g. C-x ...)
+    which-key
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user

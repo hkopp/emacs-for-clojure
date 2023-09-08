@@ -67,3 +67,7 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+;; which-key: shows a popup of available keybindings when typing a long key
+;; sequence (e.g. C-x ...)
+(which-key-mode 1)
