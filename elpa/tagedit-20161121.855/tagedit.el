@@ -4,7 +4,6 @@
 
 ;; Author: Magnar Sveen <magnars@gmail.com>
 ;; Version: 1.4.0
-;; Package-Version: 20161121.855
 ;; Keywords: convenience
 ;; Package-Requires: ((s "1.3.1") (dash "1.0.3"))
 
