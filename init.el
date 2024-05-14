@@ -14,11 +14,6 @@
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 (add-to-list 'package-pinned-packages '(magit . "melpa-stable") t)
 
-;; https://github.com/justbur/emacs-which-key#manually
-(add-to-list 'load-path "path/to/which-key.el")
-(require 'which-key)
-(which-key-mode)
-
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
@@ -169,3 +164,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; https://github.com/justbur/emacs-which-key#manually
+(add-to-list 'load-path "path/to/which-key.el")
+(require 'which-key)
+(which-key-mode)
+(setq which-key-idle-delay 0.3)
