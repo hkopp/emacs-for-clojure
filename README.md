@@ -12,7 +12,7 @@ If you're new to emacs, check out [this introductory tutorial](http://www.bravec
    where Emacs looks for configuration files, and deleting these files
    and directories will ensure that you start with a clean slate.
 3. Clone this repository
-   `git clone https://github.com/hkopp/emacs-for-clojure.git .emacs.d`
+   `git clone git@github.com:hkopp/emacs-for-clojure.git .emacs.d`
 
 Then open Emacs.
 
