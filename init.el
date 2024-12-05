@@ -85,6 +85,10 @@
 
     ;; which-key: shows a popup of available keybindings when typing a long key sequence (e.g. C-x ...)
     which-key
+
+    ;; xclip: use the copy and paste buffer from X for killing and
+    ;; yanking instead of emacs own buffers.
+    xclip
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -157,7 +161,7 @@
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
  '(package-selected-packages
-   '(writegood-mode which-key keepass-mode go-mode markdown-mode+ markdown-mode magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
+   '(xclip writegood-mode which-key keepass-mode go-mode markdown-mode+ markdown-mode magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -170,3 +174,6 @@
 (require 'which-key)
 (which-key-mode)
 (setq which-key-idle-delay 0.3)
+
+;; https://unix.stackexchange.com/questions/6640/emacs-command-to-cut-or-copy-to-system-clipboard/14935#14935
+(xclip-mode 1)
